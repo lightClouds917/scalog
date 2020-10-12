@@ -7,6 +7,7 @@ import com.java4all.scalog.utils.SourceUtil;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 import javax.sql.DataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -70,5 +71,14 @@ public class MysqlSqlExecutor implements BaseSqlExecutor {
         } finally {
             SourceUtil.close(connection);
         }
+    }
+
+
+    /**
+     * insert batch
+     */
+    @Override
+    public void insertBatch(List<LogInfoDto> dtos) throws Exception {
+        throw new UnsupportedOperationException();
     }
 }

@@ -6,6 +6,7 @@ import com.java4all.scalog.utils.BaseHelper;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import java.util.List;
 import org.bson.Document;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -42,5 +43,14 @@ public class MongoDBExecutor implements BaseSqlExecutor{
         Document document = new Document(map);
 
         collection.insertOne(document);
+    }
+
+
+    /**
+     * insert batch
+     */
+    @Override
+    public void insertBatch(List<LogInfoDto> dtos) throws Exception {
+        throw new UnsupportedOperationException();
     }
 }

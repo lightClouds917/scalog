@@ -2,6 +2,7 @@ package com.java4all.scalog.store.executor;
 
 import com.java4all.scalog.annotation.LoadLevel;
 import com.java4all.scalog.store.LogInfoDto;
+import java.util.List;
 import javax.sql.DataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,5 +32,14 @@ public class OracleSqlExecutor implements BaseSqlExecutor{
     public void insert(LogInfoDto dto) throws Exception{
         //TODO
         throw new NoSuchMethodException("Not support Oracle now!");
+    }
+
+
+    /**
+     * insert batch
+     */
+    @Override
+    public void insertBatch(List<LogInfoDto> dtos) throws Exception {
+        throw new UnsupportedOperationException();
     }
 }
